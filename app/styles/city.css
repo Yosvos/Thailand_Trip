@@ -1,20 +1,23 @@
 /* ===== GLOBAL CITY PAGE STYLING ===== */
 .city-page {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   color: #333;
   background-color: #fdfdfd;
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* ===== HOTEL SECTION ===== */
 .hotel-section {
   margin-bottom: 3rem;
-  border-left: 4px solid #2e7d32; /* green accent for visual separation */
+  border-left: 4px solid #2e7d32; /* green accent */
   padding-left: 1rem;
-  background-color: #f5fdf6; /* subtle greenish background */
+  background-color: #f5fdf6;
   border-radius: 8px;
 }
 
@@ -32,7 +35,7 @@
 .hotel-info h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: #2e7d32; /* green accent for hotel names */
+  color: #2e7d32;
 }
 
 .hotel-info p {
@@ -58,9 +61,21 @@
 .city-section h2 {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
-  color: #2e7d32; /* green headers */
-  border-bottom: 2px solid #c8e6c9; /* subtle underline */
+  color: #388e3c; /* slightly brighter green */
+  border-bottom: 2px solid #c8e6c9;
   padding-bottom: 0.25rem;
+}
+
+.city-section h2.travel {
+  color: #0288d1; /* blue for travel sections */
+}
+
+.city-section h2.must-do {
+  color: #f57c00; /* orange for must-do / highlight */
+}
+
+.city-section h2.food {
+  color: #6a1b9a; /* purple for food sections */
 }
 
 .city-section ul {
@@ -71,15 +86,27 @@
 .city-section li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
+  line-height: 1.4;
 }
 
-/* Make specific important list items stand out */
+/* Highlight important list items */
 .city-section li.highlight {
   font-weight: 600;
-  color: #1b5e20; /* darker green */
-  background-color: #e8f5e9; /* subtle highlight */
+  color: #1b5e20;
+  background-color: #e8f5e9;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+/* Special style for must-watch sunset or activities */
+.city-section li.sunset {
+  font-weight: 700;
+  color: #d84315; /* dark orange/red */
+  background-color: #ffebee;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
   display: inline-block;
   margin-bottom: 0.6rem;
 }
@@ -106,14 +133,30 @@ table {
   border-collapse: separate;
   border-spacing: 0 12px;
   text-align: left;
+  display: block; /* allow scrolling on mobile */
 }
 
 table th {
   padding: 12px;
   border-bottom: 2px solid #c8e6c9;
-  color: #2e7d32;
   font-weight: 600;
   background-color: #f1f8f1;
+}
+
+table th.green {
+  color: #2e7d32;
+}
+
+table th.blue {
+  color: #0288d1;
+}
+
+table th.orange {
+  color: #f57c00;
+}
+
+table th.purple {
+  color: #6a1b9a;
 }
 
 table td {
@@ -152,5 +195,9 @@ table tr:nth-child(even) td {
   table th, table td {
     padding: 8px;
     font-size: 0.9rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
   }
 }
