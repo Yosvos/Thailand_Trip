@@ -1,4 +1,5 @@
-import "../styles/globals.css";
+import "../styles/globals.css";  // global styles
+import "./styles/city.css";     // city-specific styles
 
 export const metadata = {
   title: "Thailand Trip Site",
@@ -9,16 +10,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <nav className="navbar">
-          <a href="/">Home</a>
-          <a href="/cities/bangkok">Bangkok</a>
-          <a href="/cities/chiangmai">Chiang Mai</a>
-          <a href="/cities/pai">Pai</a>
-          <a href="/cities/islands">Islands</a> {/* replaces Koh Kood */}
-          <a href="/packing">Packing</a>
-          <a href="/vaccinations">Vaccinations</a>
+        {/* ===== NAVIGATION BAR ===== */}
+        <nav className="navbar" style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "12px",
+          padding: "12px 16px",
+          backgroundColor: "#2e7d32",
+          color: "#fff",
+          justifyContent: "center",
+        }}>
+          <a href="/" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Home</a>
+          <a href="/cities/bangkok" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Bangkok</a>
+          <a href="/cities/chiangmai" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Chiang Mai</a>
+          <a href="/cities/pai" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Pai</a>
+          <a href="/cities/islands" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Islands</a>
+          <a href="/packing" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Packing</a>
+          <a href="/vaccinations" style={{ color: "#fff", textDecoration: "none", fontWeight: 500 }}>Vaccinations</a>
         </nav>
-        <main className="container">{children}</main>
+
+        {/* ===== PAGE CONTENT ===== */}
+        <main className="container" style={{
+          maxWidth: "100%",
+          padding: "1rem",
+          overflowX: "hidden" // prevent horizontal scrolling
+        }}>
+          {children}
+        </main>
       </body>
     </html>
   );
