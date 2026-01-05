@@ -1,0 +1,50 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf6f0;
+  color: #3e3a36;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+  background-color: #d8c3a5;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #3e3a36;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #6b4226;
+}
+
+h1, h2 {
+  color: #6b4226;
+}
+
+.place-card {
+  border: 1px solid #c1a18a;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fff8f0;
+}
+
+.place-card h3 {
+  margin: 0 0 6px 0;
+}
+
+.checkbox {
+  margin-right: 8px;
+}

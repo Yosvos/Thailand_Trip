@@ -1,0 +1,53 @@
+.city-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.hotel-section {
+  margin-bottom: 3rem;
+}
+
+.hotel-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.hotel-info h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.hotel-info p {
+  margin: 0.25rem 0 0.5rem;
+  color: #555;
+}
+
+.hotel-info a {
+  color: #6b4f3f;
+  text-decoration: underline;
+}
+
+.city-section {
+  margin-bottom: 3rem;
+}
+
+.city-section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.city-section ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.city-section li {
+  margin-bottom: 0.4rem;
+}
+
+.maps-link {
+  color: #6b4f3f;
+  font-weight: 500;
+}
