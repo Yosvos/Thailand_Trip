@@ -61,23 +61,28 @@
 .city-section h2 {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
-  color: #388e3c; /* slightly brighter green */
   border-bottom: 2px solid #c8e6c9;
   padding-bottom: 0.25rem;
 }
 
+/* Color-coded headers */
+.city-section h2.general {
+  color: #2e7d32; /* green for general/hotels */
+}
+
 .city-section h2.travel {
-  color: #0288d1; /* blue for travel sections */
+  color: #0277bd; /* blue for travel info */
 }
 
 .city-section h2.must-do {
-  color: #f57c00; /* orange for must-do / highlight */
+  color: #f57c00; /* orange for must-do/highlight */
 }
 
 .city-section h2.food {
-  color: #6a1b9a; /* purple for food sections */
+  color: #6a1b9a; /* purple for food/restaurants */
 }
 
+/* ===== LIST ITEMS ===== */
 .city-section ul {
   padding-left: 1.2rem;
   margin-bottom: 1rem;
@@ -100,7 +105,7 @@
   margin-bottom: 0.6rem;
 }
 
-/* Special style for must-watch sunset or activities */
+/* Special style for sunset or critical must-do items */
 .city-section li.sunset {
   font-weight: 700;
   color: #d84315; /* dark orange/red */
@@ -122,7 +127,7 @@
 
 /* ===== TABLES ===== */
 .table-wrapper {
-  overflow-x: auto;
+  overflow-x: auto; /* horizontal scroll on mobile */
   margin-top: 1rem;
   border-radius: 8px;
   border: 2px solid #c8e6c9;
@@ -133,7 +138,7 @@ table {
   border-collapse: separate;
   border-spacing: 0 12px;
   text-align: left;
-  display: block; /* allow scrolling on mobile */
+  display: block; /* enable scrolling on mobile */
 }
 
 table th {
@@ -143,28 +148,17 @@ table th {
   background-color: #f1f8f1;
 }
 
-table th.green {
-  color: #2e7d32;
-}
-
-table th.blue {
-  color: #0288d1;
-}
-
-table th.orange {
-  color: #f57c00;
-}
-
-table th.purple {
-  color: #6a1b9a;
-}
+table th.green { color: #2e7d32; }
+table th.blue { color: #0277bd; }
+table th.orange { color: #f57c00; }
+table th.purple { color: #6a1b9a; }
 
 table td {
   padding: 10px;
   background-color: #ffffff;
 }
 
-/* Alternate row coloring for readability */
+/* Alternate row coloring */
 table tr:nth-child(even) td {
   background-color: #f9f9f9;
 }
@@ -197,7 +191,9 @@ table tr:nth-child(even) td {
     font-size: 0.9rem;
   }
 
+  /* Flexible navbar for mobile */
   .navbar {
     flex-wrap: wrap;
+    gap: 10px;
   }
 }
